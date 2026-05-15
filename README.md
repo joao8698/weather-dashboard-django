@@ -1,16 +1,37 @@
-# **Weather Application with Django** 🌥️
+# Django Weather Dashboard
 
-This application allows you to...
+Web application developed with Django for real-time weather search using external API integration.
 
-✅ Create an account and make login
-✅ Search for any city's weather 
-✅ See real time data of any city's weather using OpenWeatherMap'API
+## Features
 
-## **Throughout this project, I learned to:...**
+* City search
+* Current temperature
+* Air humidity
+* Wind speed
+* Weather conditions
+* Responsive interface
 
-🔹 Authentication system with Django User
-🔹 Integration with external API 
-🔹 Templates and routes protected with login_required
+## Technologies
 
-### My goal with this project was to create a simple, functional, and secure web application using Django.
-### And demostrate my skills with Python Language and Django Web Framework! 🚀
+* Python
+* Django
+* HTML/CSS
+* JavaScript
+* Bootstrap
+* REST API
+
+## Deploy
+
+Application link: ...
+
+## Screenshots
+
+(images)
+
+## Running Locally
+
+```bash
+git clone ...
+pip install -r requirements.txt
+python manage.py runserver
+```
