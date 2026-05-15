@@ -1,0 +1,94 @@
+{% extends "partials/base.html" %}
+{% load static %}
+
+{% block title %}
+Clima de {{ cidade }}
+{% endblock title %}
+
+{% block content %}
+
+<div class="result">
+
+    <h1>{{ cidade }}</h1>
+
+    {% if main %}
+
+    <table class="clima-table">
+
+        <thead class="table-head">
+            <tr class="table-column">
+                <th class="table-header">Temperatura</th>
+                <th class="table-header">Umidade</th>
+                <th class="table-header">Sensação Térmica</th>
+                <th class="table-header">Descrição do Clima</th>
+                <th class="table-header">Vento</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-body">
+            <tr class="table-column">
+
+                <td class="table-td">
+                    <img
+                        class="img-td"
+                        src="{% static 'images/Icones_para_clima_do_site/icons8-dia-parcialmente-nublado-100.png' %}"
+                        alt="Ícone clima"
+                    >
+                    {{ main.temp|floatformat:0 }}°C
+                </td>
+
+                <td class="table-td">
+                    {{ main.humidity }}%
+                </td>
+
+                <td class="table-td">
+                    {{ main.feels_like|floatformat:0 }}°C
+                </td>
+
+                <td class="table-td">
+                    {% if weather.description %}
+                        {{ weather.description|title }}
+                    {% else %}
+                        Sem descrição
+                    {% endif %}
+                </td>
+
+                <td class="table-td">
+                    {{ wind.speed|floatformat:0 }} km/h
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+        <p>Nenhum dado climático encontrado.</p>
+
+    {% endif %}
+
+    <form
+        class="search-form"
+        action="{% url 'weather:clima' %}"
+        method="GET"
+    >
+        <input
+            class="search-input"
+            type="text"
+            name="cidade"
+            placeholder="Digite o nome da cidade"
+            required
+        >
+
+        <button
+            class="search-button"
+            type="submit"
+        >
+            Buscar
+        </button>
+    </form>
+
+</div>
+
+{% endblock content %}

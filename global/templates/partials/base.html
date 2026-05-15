@@ -1,0 +1,39 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+{% block header %}
+<header id="heading">
+    <h1 class="h1">
+        {% if user.is_authenticated %}
+        <a href="{% url "weather:pesquisar" %}">WEATHER</a>
+        {% else %}
+        <a href="{% url "weather:base-page" %}">WEATHER</a>
+        {% endif %}
+    </h1>
+    <nav class="links">
+            <ul>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url "weather:logout" %}">SAIR</a>
+                </li>
+                {% else %}
+                <li><a href="{% url "weather:login_user" %}">LOGIN</a></li>
+                <li><a href="{% url 'weather:cadastro' %}">CADASTRAR-SE</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+</header>
+{% endblock header %}
+{% block content %}
+<div id="base-page">
+    <h1>WEATHER</h1>
+</div>
+{% endblock content %}
+</body>
+</html>

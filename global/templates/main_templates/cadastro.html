@@ -1,0 +1,32 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Cadastro{% endblock title %}
+
+{% block header %}
+<header id="heading">
+    <h1 class="h1"><a href="{% url "weather:base-page" %}">WEATHER</a></h1>
+    <nav class="links">
+            <ul>
+                <li><a href="{% url "weather:login_user" %}">LOGIN</a></li>
+            </ul>
+        </nav>
+</header>
+{% endblock header %}
+{% block content %}
+<div id="register-div">
+    <h1>CADASTRO</h1>
+    <form id="cadastro" action="{% url "weather:cadastro" %}" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Usuario..." name="username">
+        <br>
+        <br>
+        <input type="text" placeholder="E-mail..." name="email">
+        <br>
+        <br>
+        <input type="text" placeholder="Senha..." name="password">
+        <br>
+        <br>
+        <button type="submit">CADASTRAR</button>
+    </form>
+</div>
+{% endblock content %}

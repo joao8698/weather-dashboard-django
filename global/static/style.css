@@ -1,0 +1,154 @@
+#heading {
+    height: 80px; /* ou algo como min-height */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#heading .h1 {
+    padding: 15px 0 15px 30px;
+}
+
+#heading .h1 a {
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: white;
+}
+
+#heading nav {
+    padding-right: 30px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("aerial-sea-clouds.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+.result, .search-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result .clima-table {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+.result .clima-table {
+    margin: 50px;
+}
+
+.result h1 {
+    font-family: sans-serif;
+    font-size: 130px;
+}
+
+.links {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+ul {
+    padding-top: 10px;
+    display: flex;
+    list-style-type: none
+}
+
+li a {
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+#search-h1 {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+form, .search-input {
+    height: 50px;
+    width: 500px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+
+.search-input {
+    height: 65px;
+    width: 750px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #161515;
+    color: white;
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+.search-button {
+    height: 60px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 245);
+}
+
+.search-div h1 {
+    font-family: sans-serif;
+    font-size: 67px;
+}
+
+.img-td {
+    width: 50px;
+    height: 50px;
+}
+
+.table-td {
+    width: 300px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.table-header {
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#base-page {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#base-page h1 {
+    font-size: 100px;
+}
